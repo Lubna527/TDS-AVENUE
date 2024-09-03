@@ -7,7 +7,9 @@ plot_confusion_matrix(cm,class_names)
 
 For RNN the syntax is as follows:
 model = Sequential()
-model.add(LSTM(20, input_shape=X_train.shape[1:], kernel_initializer='lecun_uniform', activation='relu', kernel_regularizer=regularizers.l1(0.1), recurrent_regularizer=regularizers.l1(0.01), bias_regularizer=None, activity_regularizer=None, dropout=0.2, recurrent_dropout=0.2))#, return_sequences=True))
+model.add(LSTM(20, input_shape=X_train.shape[1:], kernel_initializer='lecun_uniform', 
+activation='relu', kernel_regularizer=regularizers.l1(0.1), recurrent_regularizer=regularizers.l1(0.01),
+ bias_regularizer=None, activity_regularizer=None, dropout=0.2, recurrent_dropout=0.2))#, return_sequences=True))
 #model.add(LSTM(12, activation='relu', return_sequences=True))
 #model.add(LSTM(8, activation='relu'))
 model.add(Dense(1, kernel_initializer='lecun_uniform', activation='sigmoid'))
